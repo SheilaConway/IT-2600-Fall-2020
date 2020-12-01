@@ -1,0 +1,78 @@
+<?php
+     
+class Course {
+
+   public $course_number;
+   public $course_name;
+   public $department;
+   public $semester;
+   public $year;
+   public $CRN;
+   public $instructor;
+   // … you will want to set up the attributes for the other values
+   
+   function __contruct($course_number, $course_name, $department, $semester, $year, $CRN, $instructor) {
+       $this->course_number = $course_number;
+	   $this->course_name = $course_name;
+	   $this->department = $department;
+	   $this->semester = $semester;
+	   $this->year = $year;
+	   $this->CRN = $CRN;
+	   $this->instructor = $instructor;
+	   // set the values as passed in using something like:  
+       //     $this->course_name = $course_name;
+
+   }
+   
+   function display_course() {
+      echo "Course Number: " . $this->course_number . "<br/>";
+	  echo "Course Name: " . $this->course_name . "<br/>";
+	  echo "Department: " . $this->department . "<br/>";
+	  echo "Semester: " . $this->semester . "<br/>";
+	  echo "Year: " . $this->year . "<br/>";
+	  echo "CRN: " . $this->CRN . "<br/>";
+	  echo "Instructor: " . $this->instructor . "<br/>";
+      // repeat for all the attributes;
+
+   }
+
+} // end of class
+
+$course = new Course("2600", "E-Business Programming");
+$course->course_number = "2600";
+$course->course_name = "E-Business Programming Technologies";
+$course->department = "Information Technology";
+$course->semester = "Fall";
+$course->year = 2020;
+$course->CRN = 82781;
+$course->instructor = "Largent, Wayne"; 
+
+// write code to set the values for all the other attributes
+// you can set the attribute values from here
+// since you declared them as public in the clas
+//   $course->semester = "Fall";
+
+// call the method to display or print out the object
+$course->display_course();
+
+echo "<hr/>";
+
+$courseA = new Course ("1410", "Elementary Probability and Statistics");
+$courseA->course_number = "1410";
+$courseA->course_name = "Elementary Probability and Statistics";
+$courseA->department = "Math";
+$courseA->semester = "Fall";
+$courseA->year = 2020;
+$courseA->CRN = 82221;
+$courseA->instructor = "Hanley, Amanda"; 
+
+$courseA->display_course();
+
+echo "<hr/>";
+
+
+// write code to instantiate a new object for a different course
+// e.g. create an object for another class you are taking
+// and then call the method display_course() for that new object.
+
+?>
