@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Lab 10</title>
+	</head>
+	<body>
+	<h2> Sheila Conway - IT2600 - Lab10 </h2>
+		<table>
+
+    <form>
+	<tr>
+    <th>Enter beginning date:<input type="date" name = "invoice_date1" /></th>
+	</tr>
+	<tr>
+    <th>Enter ending date:<input type="date" name = "invoice_date2" /></th>
+	</tr>
+	<tr>
+    <th>Enter vendor name:<input type="text" name = "vendor_name" /></th>
+	</tr>
+	</table>
+	</body>
+	<tr>
+	<td>
+	<form action="delete_invoice.php" method="post"> 
+	       <input type="hidden" name="invoice_id" value="<?php echo $invoice['invoice_id']; ?>"> 
+	       <input type="submit" value="Delete">
+	<td align = "center" colspan="2">
+	<input type = "submit" value = "Submit" name = "" /></td>
+</form>
+</td>
+</tr>
